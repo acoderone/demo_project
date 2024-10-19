@@ -1,16 +1,15 @@
-import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
-import Register from './components/register';
-import Login from './components/login';
+import { Routes, Route } from "react-router-dom";
+import Register from "./components/register";
+import Login from "./components/login";
+import Chart from "./components/chart";
 function App() {
   return (
-    <Router>
-<Routes>
-<Route path='/register' element={<Register />}/>
-<Route path='/login' element={<Login />}/>
-
-</Routes>
-    </Router>
-  )
+    <Routes>
+      <Route path="/register" element={<Register />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/chart" element={<Chart />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
