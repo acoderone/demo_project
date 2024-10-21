@@ -81,23 +81,23 @@ function navbar() {
 
       {isModalOpenTransfer && (
         <div className="fixed inset-0 bg-black bg-opacity-35 backdrop-blur-sm flex justify-center items-center">
-          <div className="bg-white text-black p-5 rounded-md flex flex-col gap-5">
+          <div className="bg-white text-black py-5 px-8 rounded-md flex flex-col gap-4">
             <div className="flex items-center justify-between w-80">
               <div className="font-semibold text-3xl">USDT Transfer</div>
               <X
                 onClick={() => {
                   setIsModalOpenTransfer(false);
                 }}
-                className="text-gray-600"
+                className="text-gray-600 cursor-pointer"
                 size={20}
               />
             </div>
 
             <div className="flex items-center gap-3">
               <div className="text-xl">Mode :</div>
-              <div>
+              <div className="w-2/3">
                 <select
-                  className="bg-black text-white rounded-md p-1"
+                  className="bg-black w-2/3 text-white rounded-md py-1 px-2 "
                   onChange={(event) => {
                     setSelectedOption(event.target.value);
                   }}
@@ -112,14 +112,16 @@ function navbar() {
             <div className="flex items-center gap-3">
               <div className="text-xl">Mode :</div>
               <div className="">
-                <input className="border-2 w-20  border-gray-400 " />
+                <input type="number" className="border-2 w-20 px-1 border-gray-400 rounded-sm " />
               </div>
-              <div className="text-xl text-purple-400">
-                USDT
-              </div>
+              <div className="text-xl text-purple-400">(USDT)</div>
             </div>
 
-            <div>4</div>
+            <div>
+              <button className="bg-sky-600 px-5 py-2 rounded-md text-white">
+                Transfer
+              </button>
+            </div>
           </div>
         </div>
       )}

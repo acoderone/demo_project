@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none; /* Removes background so arrow is gone */
+}
+
 .h1{
     height: 10%;
     background-color: #383839;
