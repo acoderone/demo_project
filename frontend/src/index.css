@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.h1{
+    height: 10%;
+    background-color: #383839;
+}
+
+.h2{
+    height: 90%;
+    background-color: #0D0E0F
+}
